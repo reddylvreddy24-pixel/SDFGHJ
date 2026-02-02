@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Recommendation Engine (MVP)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .career {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🎯 Career Recommendation Engine</h2>
+
+    <label>Education Level</label>
+    <select id="education">
+        <option>10th</option>
+        <option>12th</option>
+        <option>Undergraduate</option>
+    </select>
+
+    <label>Interest Area</label>
+    <select id="interest">
+        <option>Technology</option>
+        <option>Business</option>
+        <option>Medical</option>
+        <option>Creative</option>
+        <option>Government</option>
+    </select>
+
+    <label>Strongest Skill</label>
+    <select id="skill">
+        <option>Coding</option>
+        <option>Math</option>
+        <option>Communication</option>
+        <option>Design</option>
+        <option>Analysis</option>
+    </select>
+
+    <button onclick="recommendCareer()">Get Career Recommendations</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function recommendCareer() {
+    let interest = document.getElementById("interest").value;
+    let resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = "<h3>✅ Recommended Careers:</h3>";
+
+    let careers = [];
+
+    if (interest === "Technology") {
+        careers = [
+            ["Software Developer", "Interest in technology and coding skills"],
+            ["Data Analyst", "Analytical thinking suits data roles"],
+            ["AI Engineer", "Problem-solving with modern technology"]
+        ];
+    } 
+    else if (interest === "Business") {
+        careers = [
+            ["Business Analyst", "Business understanding and analysis skills"],
+            ["Marketing Manager", "Communication and strategy skills"],
+            ["Sales Executive", "People interaction and persuasion skills"]
+        ];
+    } 
+    else if (interest === "Medical") {
+        careers = [
+            ["Nurse", "Helping mindset and healthcare interest"],
+            ["Medical Lab Technician", "Analytical skills for diagnostics"],
+            ["Healthcare Administrator", "Management in healthcare sector"]
+        ];
+    } 
+    else if (interest === "Creative") {
+        careers = [
+            ["Graphic Designer", "Creativity and design skills"],
+            ["Content Creator", "Creative communication ability"],
+            ["UI/UX Designer", "Design with technology"]
+        ];
+    } 
+    else if (interest === "Government") {
+        careers = [
+            ["Civil Services", "Leadership and public service"],
+            ["Banking Officer", "Stable analytical career"],
+            ["Defense Services", "Discipline and national service"]
+        ];
+    }
+
+    careers.forEach(career => {
+        resultDiv.innerHTML += `
+            <div class="career">
+                <strong>${career[0]}</strong><br>
+                ${career[1]}
+            </div>
+        `;
+    });
+}
+</script>
+
+</body>
+</html>.
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI AVENGERS </title>
+</head>
+<body>
+    
+</body>
+</html>
